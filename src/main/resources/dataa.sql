@@ -1,0 +1,1 @@
+INSERT INTO BRANCH (id, address, status) VALUES (1, 'USA', 'OPEN');
