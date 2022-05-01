@@ -8,4 +8,6 @@ To run with sample files
 To run the testSuite
 > mvn clean test
 
+To view swagger page
+> http://localhost:8080/v1/swagger-ui.html#
 
