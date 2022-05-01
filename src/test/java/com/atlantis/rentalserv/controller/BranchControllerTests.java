@@ -34,7 +34,6 @@ public class BranchControllerTests extends AbstractTest {
     @Autowired
     private BranchController controller;
 
-
     @Test
     public void createBranchTests() throws Exception {
         String uri = "/branch";
@@ -46,7 +45,6 @@ public class BranchControllerTests extends AbstractTest {
         int status = mvcResult.getResponse().getStatus();
         assertEquals(200, status);
         String content = mvcResult.getResponse().getContentAsString();
-        System.out.println(content);
         assertTrue(content.contains("b1"));
     }
 

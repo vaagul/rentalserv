@@ -51,6 +51,11 @@ public class BookingServiceImpl implements BookingService{
     @Override
     @Transactional
     public Booking bookVehicle(BookingRequest bookingRequest) {
+        if(bookingRequest.getStartTime() > bookingRequest.getEndTime()){
+            // Need to have validators specifically for payloads
+            log.info("Invalid time slot");
+            return null;
+        }
         Branch branch = branchRepository.findByBranchName(bookingRequest.getBranchName()).get(0);
         List<Vehicle> vehiclesPerBranchAndModel = branch.getVehicles().stream().filter(vehicle -> vehicle.getVehicleModel() == bookingRequest.getVehicleModel()).collect(Collectors.toList());
         if(vehiclesPerBranchAndModel.size() == 0){

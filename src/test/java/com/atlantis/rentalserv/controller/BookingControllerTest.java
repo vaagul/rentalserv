@@ -82,7 +82,6 @@ public class BookingControllerTest extends AbstractTest {
         int status = mvcResult.getResponse().getStatus();
         assertEquals(200, status);
         String content = mvcResult.getResponse().getContentAsString();
-        System.out.println(content);
         assertTrue(content.contains("bookedAt"));
     }
 
