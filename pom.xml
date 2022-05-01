@@ -130,6 +130,7 @@
 				<version>3.3.0</version>
 				<configuration>
 					<appendAssemblyId>false</appendAssemblyId>
+					<finalName>geektrust</finalName>
 					<descriptors>
 						<descriptor>src/main/assembly/zip.xml</descriptor>
 					</descriptors>
